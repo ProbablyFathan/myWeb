@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myWeb</title>
+    <style>
+      body {
+        background-image: url('https://myweb.fathan2000.repl.co/static/bg.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+      h1{
+        font-size: 40px;
+        color: white;
+        text-align: center;
+      }
+      p{
+        text-align: justify;
+      }
+      #banner{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+      }
+      .container {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        background-color: rgba(162, 162, 162, 0.6);
+        padding-left: 20px;
+        padding-right: 20px;
+        color: white;
+      }
+      .circular-image{
+          flex: 1;
+          width: 100px;
+          height: 100px;
+          border-radius: 70px;
+          object-fit: cover;
+          display: flex;
+          align-items: center;
+          margin: 20px;
+    }
+      .item-cat{
+        width: 80%;
+        margin: 0 auto;
+        background-color: rgba(162, 162, 162, 0.6);
+        border-radius: 20px;
+        margin-bottom: 20px;
+        padding:5px;
+      }
+      .tag {
+        background-color:  rgba(255, 22, 22, 0.8);
+        border-radius: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        color: white;
+      }
+      .button-go{
+        background-color: rgba(107, 218, 79, 0.8);
+        border-radius: 4px;
+        border:none;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .button-go:hover{
+        background-color: rgba(51, 255, 0, 0.8);
+        color: white;
+    }
+    </style>
+
+    
+    
+    
+</head>
+<body>
+  <img id='banner' src='https://myweb.fathan2000.repl.co/static/longCat.jpg' alt='Image of a long cat'>
+    <h1>{{title}}</h1>
+    <div class='container'>
+        <p> {{description | safe}} </p>
+    </div>
+  <h2>Cat List</h2>
+    <div>
+        {% for cat in catList %}
+          {% include 'item-cat.html' %}
+        {% endfor %}
+    </div>
+    
+    
+</body>
+</html>

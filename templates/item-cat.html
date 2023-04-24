@@ -1,0 +1,15 @@
+        <div class="item-cat">
+          <a>
+          <img class="circular-image" src="{{cat['link']}}" style="float: left;">
+          </a>
+          <div style="flex: 2;">
+            <h3 style>{{cat['name']}}</h3>
+            <p>{{cat['description']}}</p>
+            <p>
+              <b>Temperament:</b> {% for tag in cat['temperament'] %}
+              <a class='tag'>{{tag}}</a>
+              {% endfor %}
+            </p>
+          </div>
+          <button class="button-go">Go</button>
+        </div>
